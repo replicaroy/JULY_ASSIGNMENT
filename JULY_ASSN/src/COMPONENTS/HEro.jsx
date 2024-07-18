@@ -1,43 +1,52 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../App.css";
 import axios from "axios";
 
-const HEro = () => {
+const Hero = () => {
   const [data, setData] = useState([]);
 
   const getData = async () => {
-    let res = await axios.get("https://renderjsondata.onrender.com/men");
-    res = res.data;
-    setData(res);
-    console.log(data);
+    try {
+      let res = await axios.get("https://renderjsondata.onrender.com/men");
+      res = res.data;
+      setData(res);
+      console.log(data);      
+    } catch (error) {
+      console.log(error)
+    }
   };
-  getData();
+
+  useEffect(() => {  
+    getData();
+  }, []);
 
   return (
-    <>
-      {data.map((item) => (
+    <>     
         <div
           className="container"
           style={{ padding: "1% 4%", margin: "auto", marginTop: "100px" }}
         >
-          <div className="main-item custom-grid">
-            <div className="item">
-              <div className="img">
+          <div className="main-item custom-grid" style={{}}>
+          {data.map((item, i) => (
+            <div className="item rounded shadow-md" style={{maxWidth: 300}} key={i}>
+              <div className="img" style={{width: '100%'}}>
                 <img src={item.image} alt="image" />
               </div>
-              <div className="details  text-xl text-gray-700  px-4 ">
-                <p>{item.name}</p>
+              <div className="details text-md text-gray-700 px-2 p-1">
+                <p>{typeof item.name === 'string' ? item.name.slice(0, 20) : ''}</p>
               </div>
-              <div className="desc flex justify-between px-4  text-2xl text-gray-600">
-                <p className=" ">{item.price}</p> <p>{item.rating}</p>
+              <div className="desc flex justify-between px-3 text-xl text-gray-600">
+                <p>$ {item.price}</p>
+                <p className="text-sm">Rating {item.rating}</p>
               </div>
             </div>
+          ))}
           </div>
         </div>
-      ))}
-      <div className="carausal"></div>
+    
+      <div className="carousel"></div>
     </>
   );
 };
 
-export default HEro;
+export default Hero;

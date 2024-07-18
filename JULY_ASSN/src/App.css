@@ -1,5 +1,37 @@
-.custom-grid {
-  display: grid;
- grid-template-columns: repeat(auto-fit , minmax(300px, auto));
 
+*{
+  margin: 0; padding: 0;
+}.custom-grid {
+  display: grid;
+ grid-template-columns: repeat(auto-fit , minmax(250px, auto));
+gap: 25px;
+
+}
+
+/* .custom-grid {
+  display: flex;
+background: pink;
+
+} */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.add-to-cart {
+  background-color: #28a745;
+}
+
+.btn.buy-now {
+  background-color: #dc3545;
+}
+
+.btn:hover {
+  opacity: 0.9;
 }
