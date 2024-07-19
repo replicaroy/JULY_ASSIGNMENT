@@ -1,18 +1,13 @@
-
-*{
-  margin: 0; padding: 0;
-}.custom-grid {
-  display: grid;
- grid-template-columns: repeat(auto-fit , minmax(250px, auto));
-gap: 25px;
-
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
-
-/* .custom-grid {
-  display: flex;
-background: pink;
-
-} */
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 50px 25px;
+}
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -23,15 +18,53 @@ background: pink;
   border: none;
   cursor: pointer;
 }
-
 .btn.add-to-cart {
   background-color: #28a745;
 }
-
 .btn.buy-now {
   background-color: #dc3545;
 }
-
 .btn:hover {
   opacity: 0.9;
+}
+.contact {
+  background: #f3f4f6;
+}
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+  gap: 4rem;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contact-info .info p {
+  color: #565656;
+  font-size: 1rem;
+  margin: 5px 0;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all 0.45s ease;
+}
+.contact-info .info p:hover {
+  color: var(--red);
+}
+.contact-info .info h4 {
+  color: var(--color);
+  font-size: 18px; font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: rgb(77, 77, 77);
+}
+.social a {
+  color: #565656;
+  font-size: 2rem;
+  margin: 5px 7px;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #eae7e7;
+  font-size: 1.2rem;
+  font-weight: bold;
 }

@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 import 'remixicon/fonts/remixicon.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
