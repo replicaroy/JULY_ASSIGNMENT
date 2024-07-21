@@ -6,26 +6,22 @@ import 'aos/dist/aos.css';
 
 let cartarr = JSON.parse(localStorage.getItem("cartitems")) || [];
 
-const Prductdetails = (item)=> {
-  // let itemId = i;
-  // let itemImg = item.image;
-  // let itemprice = item.price ;
-  // let itemdetail = item.name;
-  cartarr.push(item);
+let quantity = 1
+const AddtoCart = (item)=> {
+  cartarr.push(item, quantity);
   console.log(cartarr);
   localStorage.setItem("cartitems", JSON.stringify(cartarr));
-
 }
+
 const Hero = ({data}) => {
   return (
-    <>     
-        <div
-          className="containers min-h-screen  "  
-          style={{ padding: "1% 10%", margin: "auto", marginTop: "30px" }}
-        >
+    <>          
+        <div class="container min-h-screen py-4  sm:px-6 md:px-15 xl:px-20 2xl-px-30">
+
+
           <div className="main-item custom-grid" style={{}}   >
           {data.map((item, i) => (
-            <div className="item rounded shadow-md m-auto" style={{maxWidth: 300}} key={i}  >
+            <div className="item rounded shadow-md m-auto"  key={i}  >
               <div className="img" style={{width: '100%'}}>
                 <img src={item.image} alt="image" />
               </div>
@@ -38,7 +34,7 @@ const Hero = ({data}) => {
                 <p className="text-sm">Rating {item.rating}</p>
               </div>
               <div className="btn-div flex justify-between px-2 mb-3">
-                <button className="btn border shadow bg-slate-100" onClick={()=> Prductdetails(item)} >Add to Cart</button>
+                <button className="btn border shadow bg-slate-100" onClick={()=> AddtoCart(item)} >Add to Cart</button>
                 <button className="btn border shadow bg-yellow-200 hover:text-black " onClick={()=> Prductdetails(item)} >Buy Now</button>              </div>
             </div>
           ))}
