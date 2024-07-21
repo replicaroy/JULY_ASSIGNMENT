@@ -8,7 +8,7 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   gap: 50px 25px;
 }
-.btn {
+/* .btn {
   display: inline-block;
   padding: 10px 20px;
   margin: 10px;
@@ -26,7 +26,7 @@
 }
 .btn:hover {
   opacity: 0.9;
-}
+} */
 .contact {
   background: #f3f4f6;
 }
@@ -68,3 +68,28 @@ footer {
   font-size: 1.2rem;
   font-weight: bold;
 }
+.header{
+  padding: 10px 10%;
+}
+.menu{
+display: flex; gap: 60px;
+}
+
+@media (max-width: 1250px) {
+  .menu{
+   gap: 30px;
+   }
+   .header{
+    padding: 10px 6%;
+  }
+}
+  
+@media  (max-width: 640px) {
+  .menu{
+   /* display: none; */
+   background: red;
+  }
+  .header{
+    padding: 10px 3%;
+  }
+} 

@@ -37,9 +37,9 @@ const Hero = ({data}) => {
                 <p>$ {item.price}</p>
                 <p className="text-sm">Rating {item.rating}</p>
               </div>
-              <div className="btn-div">
-                <button className="btn border shadow" onClick={()=> Prductdetails(item)} >Add to Cart</button>
-              </div>
+              <div className="btn-div flex justify-between px-2 mb-3">
+                <button className="btn border shadow bg-slate-100" onClick={()=> Prductdetails(item)} >Add to Cart</button>
+                <button className="btn border shadow bg-yellow-200 hover:text-black " onClick={()=> Prductdetails(item)} >Buy Now</button>              </div>
             </div>
           ))}
           </div>
