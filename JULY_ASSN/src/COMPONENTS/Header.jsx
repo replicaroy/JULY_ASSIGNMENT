@@ -48,7 +48,7 @@ const Header = () => {
     >
       <div className="header-logo " style={{ minWidth: "60px", width: "60px" }}>
         <img
-          src="https://www.svgrepo.com/show/217771/shopping-logo.svg"
+          src="https://aartisto.com/wp-content/uploads/2020/11/myntra.png"
           alt="image"
           style={{ width: "100%" }}
         />
@@ -70,19 +70,20 @@ const Header = () => {
           style={{ border: "1px solid #aaa" }}
         />
       </div>
-      <div className="cart-btn flex items-center ">
+      <div className="cart-btn flex items-center gap-2 ">
         <div className="btn" style={{ position: "relative" }}>
-          <button className="text-3xl" onClick={showDrawer}>
+          <button className="text-xl flex items-center gap-1" onClick={showDrawer}>
             <i class="fa-solid fa-cart-shopping"></i>
+            <span className="text-xl hidden md:block text-gray-600">cart</span>
           </button>
           <span
-            className="cart text-red-700 font-bold"
-            style={{ position: "absolute", top: "-12px", left: "20px" }}
+            className="cart text-sm text-red-700 font-bold"
+            style={{ position: "absolute", top: "-12px", left: "16px" }}
           >
             {cartLength}
           </span>
         </div>
-      <div className="menubar md:hidden font-bold text-6xl cursor-pointer  " onClick={(e)=> menu(e)}>&#8801;</div>
+      <div className="menubar md:hidden font-bold text-5xl cursor-pointer mt-[-12px]  " onClick={(e)=> menu(e)}>&#8801;</div>
       </div>
 
       <Drawer title="Basic Drawer border" onClose={onClose} open={open}>

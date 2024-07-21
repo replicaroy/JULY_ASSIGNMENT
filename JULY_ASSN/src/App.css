@@ -61,15 +61,12 @@ display: flex; gap: 60px;
    gap: 30px;
    }
    .header{
-    padding: 10px 6%;
+    padding: 10px 4%;
   }
 }
   
 @media  (max-width: 640px) {
-  .menu{
-   /* display: none; */
-   background: red;
-  }
+
   .header{
     padding: 10px 3%;
   }
