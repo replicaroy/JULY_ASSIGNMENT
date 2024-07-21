@@ -185,7 +185,7 @@ const Header = () => {
 
   const [open, setOpen] = useState(false);
   const [quantity, setQuantity] = useState(1);
-  const [menus, setMenus] = useState('-800px')
+  const [menus, setMenus] = useState('false')
   
 
   const showDrawer = () => {
@@ -208,7 +208,7 @@ const Header = () => {
 
 
     const menu = () => {
-      setMenus(menus === '-800px' ? '0px' : '-800px');
+      setMenus(!menus);
     };
 
   return (
@@ -261,12 +261,12 @@ const Header = () => {
           </span>
         </div>
       <div className="menubar md:hidden font-bold  cursor-pointer mt-[-12px]  " onClick={(e)=> menu(e)}>
-      { menus === '-800px' ? <i class="fa-solid fa-bars text-4xl "> </i> : <i class="fa-solid fa-x text-4xl "></i> } </div>
+      { menus ? <i class="fa-solid fa-bars text-4xl "> </i> : <i class="fa-solid fa-x text-4xl "></i> } </div>
       </div>
       <div
         className="menu absolute shadow z-100000 top-16 w-60 bg-white text-fuchsia-800 
         items-center flex-col transition h-screen py-10 gap-10"
-        style={{ right: menus, transition: '.4s ease' }}
+        style={{ right: menus? '-400px' : 0 , transition: '.4s ease' }}
       >
   <Link to="/" style={{ textDecoration: "none" }}>Men</Link>
   <Link to="/women" style={{ textDecoration: "none" }}>Women</Link>
