@@ -6,21 +6,37 @@ import HEro from "./HEro";
 
 const Girls = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
 
   const getData = async () => {
     try {
-      let res = await axios.get(" https://render-json-server-a4l5.onrender.com/girls");
+      setLoading(true);
+      let res = await axios.get(
+        "https://render-json-server-a4l5.onrender.com/girls"
+      );
       res = res.data;
       setData(res);
-      console.log(data);      
+      setLoading(false);
+      console.log(data);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
 
-  useEffect(() => {  
+  useEffect(() => {
     getData();
   }, []);
+
+  if (loading)
+    return (
+      <div className="grid place-items-center min-h-96 ">
+                 <div className=" animate-spin border-gray-400 text-4xl w-10 font-bold border-8 border-b-black border-dotted rounded-full p-10 ">
+
+          {" "}
+        </div>
+      </div>
+    );
 
   return (
     <>     

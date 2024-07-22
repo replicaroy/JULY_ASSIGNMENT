@@ -13,6 +13,7 @@ import Girls from './COMPONENTS/Girls';
 import Women from './COMPONENTS/Women';
 import Men from './COMPONENTS/Men';
 import Footer from './COMPONENTS/Footer';
+// import ProductDetails from './COMPONENTS/Productdetails';
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/girls" element={<Girls />} />
         <Route path="/product" element={<Products />} />
         <Route path="/about" element={<About />} />
+        {/* <Route path="/product/:id" element={<ProductDetails />} /> */}
         <Route path="*" element={<Nopage />} />
       </Routes>
       <Footer/>

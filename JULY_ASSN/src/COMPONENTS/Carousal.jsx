@@ -7,7 +7,7 @@ const Carousal = () => {
     <Carousel className=' mx-2 ' style={{marginTop: '90px', }}>
       <Carousel.Item>
         <img
-          className="d-block w-100 object min-h-32" 
+          className="d-block w-100 object min-h-32 " 
           src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/50c473c8fd544304.jpeg?q=20"
           alt="First slide"
         />  
