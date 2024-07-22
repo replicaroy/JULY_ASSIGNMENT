@@ -4,11 +4,11 @@ import { Carousel } from 'react-bootstrap';
 const Carousal = () => {
   return (
     <div className=''>
-    <Carousel className=' mx-2 ' style={{marginTop: '90px', }}>
+    <Carousel className='  lg:mx-44 ' style={{marginTop: '90px', }}>
       <Carousel.Item>
         <img
-          className="d-block w-100 object min-h-32 " 
-          src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/50c473c8fd544304.jpeg?q=20"
+          className="d-block w-100 object min-h-32  " 
+          src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/cc4cf0843be9e4a8.jpg?q=20"
           alt="First slide"
         />  
       </Carousel.Item>
@@ -22,7 +22,7 @@ const Carousal = () => {
       <Carousel.Item>
         <img
           className="d-block w-100 min-h-32 "
-          src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/d32fe11cd7824fb0.jpeg?q=90"
+          src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/e0e3dbc99b6b1d83.jpeg?q=20"
           alt="Third slide"
         />
       </Carousel.Item>

@@ -57,7 +57,7 @@ const Header = () => {
           style={{ width: "100%" }}
         />
       </div>
-      <div className="menu hidden  md:flex gap-20 ">
+      <div className="menu hidden  sm:flex gap-20 ">
   <Link to="/" style={{ textDecoration: "none" }}>Men</Link>
   <Link to="/women" style={{ textDecoration: "none" }}>Women</Link>
   <Link to="/girls" style={{ textDecoration: "none" }}>Girls</Link>
